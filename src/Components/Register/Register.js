@@ -1,24 +1,26 @@
     import React, {useState} from 'react';
     import {Link} from 'react-router-dom';
+    import axios from 'axios';
     import './../Login/Login.css';
 
-    const Register = () => {
+    const Register = (props) => {
 
         const register = () => {
             console.log('Register it up yo')
+            props.history.push('/home')
         }
 
-        const [userEmail, updateUserEmail] = useState('')
-        const [userPassword, updateUserPassword] = useState('')
-        const [userPasswordRetype, updateUserPasswordRetype] = useState('')
+        let [userEmail, updateUserEmail] = useState('')
+        let [userPassword, updateUserPassword] = useState('')
+        let [userPasswordRetype, updateUserPasswordRetype] = useState('')
 
         return(
             <div className="LoginMain">
                 <div className="LoginBox">
                     <h1>Register</h1>
-                    <input type='text' placeholder='email'/>
-                    <input type='password' placeholder='password'/>
-                    <input type='password' placeholder='re-type password'/>
+                    <input type='text' placeholder='email' onChange={(e) => {updateUserEmail(e.target.value)}}/>
+                    <input type='password' placeholder='password' onChange={(e) => {updateUserPassword(e.target.value)}}/>
+                    <input type='password' placeholder='re-type password' onChange={(e) => {updateUserPasswordRetype(e.target.value)}}/>
                     <button onClick={() => {register()}}>Register</button>
                     
                     Or sign up with

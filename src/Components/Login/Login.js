@@ -2,13 +2,14 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import './Login.css'
 
-const Login = () => {
+const Login = (props) => {
 
     let [rememberChecked, updateRememberChecked] = useState(true)
 
     const login = () => {
         console.log("Login dangit")
         console.log(rememberChecked)
+        props.history.push('/home')
     }
 
     return(

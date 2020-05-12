@@ -1,10 +1,12 @@
 import React from 'react';
+import NavBar from './../NavBar/NavBar';
 
 const WindowSill = () => {
 
     
     return(
         <div>
+            <NavBar />
             WindowSill
         </div>
     )

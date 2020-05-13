@@ -1,23 +1,29 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
+import axios from 'axios';
 import './Login.css'
 
 const Login = (props) => {
 
     let [rememberChecked, updateRememberChecked] = useState(true)
+    let [userEmail, updateUserEmail] = useState('');
+    let [userPassword, updateUserPassword] = useState('');
 
     const login = () => {
-        console.log("Login dangit")
-        console.log(rememberChecked)
-        props.history.push('/home')
+        axios.get('/ping')
+            .then(repone => {
+                if (repone.data === "Oh, Hello!"){
+                    props.history.push('/home')
+                }
+            })
     }
 
     return(
         <div className="LoginMain">
             <div className='LoginBox'>
                 <h1>Login</h1>
-                <input type="text" placeholder="Email"/>
-                <input type="password" placeholder="Password" />
+                <input type="text" placeholder="Email" onChange={(e) => updateUserEmail(e.target.value)}/>
+                <input type="password" placeholder="Password" onChange={(e) => updateUserPassword(e.target.value)}/>
                 <div className="LoginRememberCheck">
                     <input type="checkbox" id="remember" name="remember" defaultChecked onClick={() => updateRememberChecked(!rememberChecked)}/>
                     <label htmlFor="remember">Remember Me</label>

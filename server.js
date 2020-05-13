@@ -11,6 +11,15 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(cors());
 
+// massive(process.env.CONNECTION_STRING)
+//     .then((instance) => {
+//         app.set('db', instance);
+//         console.log('Db is connected')
+//     })
+//     .catch((error) => {
+//         console.log(`Error: ${error}`)
+//     })
+
 app.get('/ping', (req, res) => {
     res.send('Oh, Hello!')
 })
@@ -20,3 +29,9 @@ app.listen(port, () => {
     console.log(`Listening on port ${port}`)
 })
 
+// CREATE TABLE user_table (
+//     user_id serial,
+//     user_email varchar,
+//     user_email varchar,
+//     PRIMARY KEY (user_id)
+// );

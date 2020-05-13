@@ -6,8 +6,18 @@
     const Register = (props) => {
 
         const register = () => {
-            console.log('Register it up yo')
-            props.history.push('/home')
+            let obj = {userEmail, userPassword, userPasswordRetype}
+            if (obj.userPassword === userPasswordRetype){
+                axios.get('/ping')
+                .then(respone => {
+                    if (respone.data === 'Oh, Hello!'){
+                        console.log(respone.data)
+                        props.history.push('/home')
+                    }
+                })
+            }else{
+                alert("Um... passwords don't match friend....")
+            }
         }
 
         let [userEmail, updateUserEmail] = useState('')

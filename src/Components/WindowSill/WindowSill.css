@@ -1,0 +1,53 @@
+.WindowsillProper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    height: 90vh;
+    background-image: url('./../../Assets/WindowsillArtMobile.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgb(132, 114, 114);
+}
+
+.WindowsillPots {
+    margin-top: 27vw;
+    width: 80vw;
+    height: 70vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.SinglePot {
+    width: 30vw;
+    background-image: url('./../../Assets/Pot_01_Corgi.png');
+    background-size: cover;
+    background-position: center;
+    margin: 5vw;
+}
+
+@media screen and (min-width: 810px){
+    .WindowsillProper{
+        background-image: url('./../../Assets/WindowsillArtMobile.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        width: 100vw;
+        height: 90vh;
+    }
+
+    .WindowsillPots{
+        margin-left: 4vw;
+        margin-top: 6%;
+        width: 25vw;
+        height: 70vh;
+    }
+
+    .SinglePot {
+        width: 9vw;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 1vw;
+    }
+}

@@ -1,13 +1,25 @@
 import React from 'react';
 import NavBar from './../NavBar/NavBar';
+import './WindowSill.css';
+
+import windowsillBackground from './../../Assets/WindowsillArt.png'
 
 const WindowSill = () => {
 
     
     return(
-        <div>
+        <div className="WindowsillMain">
             <NavBar />
-            WindowSill
+            <div className="WindowsillProper">
+                <div className="WindowsillPots">
+                    <div className="SinglePot"></div>
+                    <div className="SinglePot"></div>
+                    <div className="SinglePot"></div>
+                    <div className="SinglePot"></div>
+                    <div className="SinglePot"></div>
+                    <div className="SinglePot"></div>
+                </div>
+            </div>
         </div>
     )
 }

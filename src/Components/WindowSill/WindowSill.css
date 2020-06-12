@@ -20,11 +20,21 @@
 }
 
 .SinglePot {
-    width: 30vw;
-    background-image: url('./../../Assets/Pot_01_Corgi.png');
-    background-size: cover;
-    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
     margin: 5vw;
+}
+
+.PotImg {
+    width: 30vw;
+    position: relative;
+}
+
+.PlantImg {
+    width: 60%;
+    position: absolute;
+    margin-top: -2vh;
 }
 
 @media screen and (min-width: 810px){
@@ -46,8 +56,9 @@
 
     .SinglePot {
         width: 9vw;
-        background-repeat: no-repeat;
-        background-size: contain;
+        /* background-repeat: no-repeat;
+        background-size: contain; */
         margin: 1vw;
+        position: relative;
     }
 }

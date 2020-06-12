@@ -4,20 +4,43 @@ import './WindowSill.css';
 
 import windowsillBackground from './../../Assets/WindowsillArt.png'
 
+import corgiPot from './../../Assets/Pot_01_Corgi.png'
+
+import blueStraw01 from './../../Assets/Blue_Strawberry_Stage_01.png'
+
 const WindowSill = () => {
 
     
     return(
         <div className="WindowsillMain">
             <NavBar />
+            
             <div className="WindowsillProper">
                 <div className="WindowsillPots">
-                    <div className="SinglePot"></div>
-                    <div className="SinglePot"></div>
-                    <div className="SinglePot"></div>
-                    <div className="SinglePot"></div>
-                    <div className="SinglePot"></div>
-                    <div className="SinglePot"></div>
+                    <div className="SinglePot">
+                        <img className="PlantImg" src={blueStraw01}/>
+                        <img className="PotImg" src={corgiPot}/>
+                    </div>
+                    <div className="SinglePot">
+                        <img className="PlantImg" src={blueStraw01}/>
+                        <img className="PotImg" src={corgiPot}/>
+                    </div>
+                    <div className="SinglePot">
+                        <img className="PlantImg" src={blueStraw01}/>
+                        <img className="PotImg" src={corgiPot}/>
+                    </div>
+                    <div className="SinglePot">
+                        <img className="PlantImg" src={blueStraw01}/>
+                        <img className="PotImg" src={corgiPot}/>
+                    </div>
+                    <div className="SinglePot">
+                        <img className="PlantImg" src={blueStraw01}/>
+                        <img className="PotImg" src={corgiPot}/>
+                    </div>
+                    <div className="SinglePot">
+                        <img className="PlantImg" src={blueStraw01}/>
+                        <img className="PotImg" src={corgiPot}/>
+                    </div>
                 </div>
             </div>
         </div>
